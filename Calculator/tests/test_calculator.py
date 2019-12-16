@@ -48,3 +48,7 @@ class CalculatorUTest (unittest.TestCase):
     def test_tan(self):
         self.assertEqual(1.5574077246549023,
                          Calc.handle_expression(self, 'tan(1)'))
+
+    def test_pemdas(self):
+        self.assertEqual(2, Calc.handle_expression(
+            self, '(9-3*4/6+3)/((8/4)^2+3*7-20)'))
