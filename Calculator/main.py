@@ -1,11 +1,8 @@
 import unittest
-from test_calc import CalculatorUTest
-from calculator import Calculator
+from tests.test_calculator import CalculatorUTest
+from src.calculator import Calculator
 
 if __name__ == '__main__':
-  unittest.main(CalculatorUTest(), exit=False)
+    unittest.main(CalculatorUTest(), exit=False)
 
-  Calculator().handle_expression('something')
-
-  
-
+    print(Calculator().handle_expression('cos(1)'))
