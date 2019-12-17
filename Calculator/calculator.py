@@ -1,4 +1,4 @@
-from math import sin, cos, tan
+from math import sin, cos, tan, pi
 
 
 class Calculator():
