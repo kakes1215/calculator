@@ -61,3 +61,7 @@ class CalculatorUTest (unittest.TestCase):
     def test_pemdas(self):
         self.assertEqual(1960, Calc.handle_expression(
             self, '(4/2)-2*45+32**2*(3-1)'))
+        self.assertEqual(7, Calc.handle_expression(self, '1+2*3'))
+        self.assertEqual(15, Calc.handle_expression(self, '5-2+3*4'))
+        self.assertEqual(8, Calc.handle_expression(self, '(2-1)+(3+4)'))
+        self.assertEqual(2, Calc.handle_expression(self, '2-(1+3)+4'))
