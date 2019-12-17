@@ -1,6 +1,6 @@
 import unittest
 import math
-from src.calculator import Calculator as Calc
+from calculator import Calculator as Calc
 
 
 class CalculatorUTest (unittest.TestCase):
@@ -49,6 +49,15 @@ class CalculatorUTest (unittest.TestCase):
         self.assertEqual(1.5574077246549023,
                          Calc.handle_expression(self, 'tan(1)'))
 
+    """
+    1) Parenthesis
+    2) Exponents
+    3) Multiplication
+    4) Division
+    5) Addition
+    6) Subtraction
+    """
+
     def test_pemdas(self):
-        self.assertEqual(2, Calc.handle_expression(
-            self, '(9-3*4/6+3)/((8/4)^2+3*7-20)'))
+        self.assertEqual(1960, Calc.handle_expression(
+            self, '(4/2)-2*45+32**2*(3-1)'))
